@@ -4,7 +4,16 @@ const StyledPassswordRecovery = styled.span`
   color: #989FDB;
   text-align: center;
 `;
+const Link = styled.a`
+  color: #9D25B0;
+  text-decoration: underline;
+`;
 
-export default function PassswordRecovery({ content }) {
-  return <StyledPassswordRecovery>{content}</StyledPassswordRecovery>;
+export default function PassswordRecovery({ url }) {
+  return (
+    <StyledPassswordRecovery>
+      Esqueceu seu login ou senha?
+      Clique <Link href={url}>aqui</Link>
+    </StyledPassswordRecovery>
+  );
 }

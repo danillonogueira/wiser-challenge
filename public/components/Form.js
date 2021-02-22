@@ -32,7 +32,7 @@ export default function Form() {
           type={'password'} 
         />
         <Button label={'ENTRAR'} />
-        <PassswordRecovery content={'Esqueceu seu login ou senha? Clique aqui'} />
+        <PassswordRecovery url={'https://wiseup.com/pt/online'} />
       </FormContent>
     </StyledForm>
   );
