@@ -11,6 +11,10 @@ const StyledHome = styled.div`
   position: fixed;
   width: 100%;
   height: 100%;
+
+  @media(max-width: 768px) {
+    grid-template-columns: 35% auto;
+  }
 `;
 
 export default function Home() {

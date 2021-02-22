@@ -9,6 +9,13 @@ const StyledForm = styled.div`
   height: 100%;
   padding: 136px 0 0 112px;
   width: 100%;
+
+  @media(max-width: 1366px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
 `;
 const FormContent = styled.div`
   display: flex;

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const StyledPassswordRecovery = styled.span`
   color: #989FDB;
+  font-size: 14px;
   text-align: center;
 `;
 const Link = styled.a`
