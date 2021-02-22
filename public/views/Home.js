@@ -7,7 +7,7 @@ import Form from './../components/Form';
 
 const StyledHome = styled.div`
   display: grid;
-  grid-template-columns: 58% auto;
+  grid-template-columns: 56% auto;
   position: fixed;
   width: 100%;
   height: 100%;

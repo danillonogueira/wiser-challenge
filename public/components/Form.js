@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Text from './Text';
 import Input from './Input';
+import Button from './Button';
 
 const StyledForm = styled.div`
   display: flex;
@@ -47,6 +48,7 @@ export default function Form() {
         type={'password'}
         label={'SENHA'}
       />
+      <Button label={'ENTRAR'} />
     </StyledForm>
   );
 }
