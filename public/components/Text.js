@@ -7,6 +7,12 @@ export default function Text({ content, styles }) {
     font-weight: 400;
     line-height: 20px;
     ${styles}
+
+    a {
+      color: #9D25B0;
+      text-decoration: underline;
+      cursor: pointer;
+    }
   `;
 
   return <StyledText>{content}</StyledText>;

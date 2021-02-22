@@ -4,51 +4,68 @@ import Input from './Input';
 import Button from './Button';
 
 const StyledForm = styled.div`
-  display: flex;
-  flex-direction: column;
   width: 100%;
   height: 100%;
-  padding: 136px 112px;
+  padding: 136px 0 0 112px;
+`;
+const FormContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 257px;
 `;
 
 export default function Form() {
   return (
     <StyledForm>
-      <Text 
-        content={[
-          'Olá, seja',
-          <br />,
-          'bem-vindo!'
-        ]}
-        styles={`
-          font-size: 40px;
-          line-height: 48px;
-          margin-bottom: 16px;
-        `}
-      />
-      <Text
-        content= {[
-          'Para acessar a plataforma',
-          <br />,
-          'faça seu login'
-        ]}
-        styles={`
-          font-size: 16px;
-          font-weight: 600;
-          color: #989FDB;
-          margin-bottom: 43px;
-        `}
-      />
-      <Input 
-        type={'text'}
-        placeholder={'user.name@mail.com'}
-        label={'E-MAIL'}
-      />
-      <Input 
-        type={'password'}
-        label={'SENHA'}
-      />
-      <Button label={'ENTRAR'} />
+      <FormContent>
+        <Text 
+          content={[
+            'Olá, seja',
+            <br />,
+            'bem-vindo!'
+          ]}
+          styles={`
+            font-size: 40px;
+            line-height: 48px;
+            margin-bottom: 16px;
+          `}
+        />
+        <Text
+          content= {[
+            'Para acessar a plataforma',
+            <br />,
+            'faça seu login'
+          ]}
+          styles={`
+            font-size: 16px;
+            font-weight: 600;
+            color: #989FDB;
+            margin-bottom: 43px;
+          `}
+        />
+        <Input 
+          type={'text'}
+          placeholder={'user.name@mail.com'}
+          label={'E-MAIL'}
+        />
+        <Input 
+          type={'password'}
+          label={'SENHA'}
+        />
+        <Button label={'ENTRAR'} />
+        <Text
+          content={[
+            'Esqueceu seu login ou senha?',
+            <br />,
+            'Clique ',
+            <a href="#">aqui</a>
+          ]}
+          styles={`
+            color: #989FDB;
+            text-align: center;
+          `}
+        />
+      </FormContent>
     </StyledForm>
   );
 }
