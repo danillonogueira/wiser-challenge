@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import include from './../helpers/MediaQueries';
 
 const InputContainer = styled.div`
   display: flex;
@@ -20,8 +21,10 @@ const StyledInput = styled.input`
     line-height: 48px;
   }
 
-  @media(max-width: 482px) {
-    margin-bottom: 16px;
+  ${
+    include('mobile', `
+      margin-bottom: 16px;
+    `)
   }
 `;
 const Label = styled.span`
@@ -30,9 +33,11 @@ const Label = styled.span`
   color: #383E71;
   margin-left: 10px;
 
-  @media(max-width: 482px) {
-    line-height: initial;
-    margin-bottom: 8px;
+  ${
+    include('mobile', `
+      line-height: initial;
+      margin-bottom: 8px;
+    `)
   }
 `;
 

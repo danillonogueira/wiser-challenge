@@ -1,20 +1,25 @@
 import styled from 'styled-components';
+import include from './../helpers/MediaQueries';
 
 const StyledBackground = styled.div`
+  background: url('./../assets/background.png');
+  background-size: cover;
   height: 100%;
   position: relative;
   width: 100%;
-  background: url('./../assets/background.png');
-  background-size: cover;
 
-  @media(max-width: 1024px) {
-    background-position: center;
+  ${
+    include('desktop', `
+      background-position: center;
+    `)
   }
 
-  @media(max-width: 482px) {
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: contain;
+  ${
+    include('mobile', `
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: contain;
+    `)
   }
 `;
 const Mask = styled.div`
@@ -25,8 +30,10 @@ const Mask = styled.div`
   transform: rotate(-180deg);
   width: 100%;
 
-  @media(max-width: 482px) {
-    background: linear-gradient(180deg, #130525 60%, rgba(105, 57, 153, 0));
+  ${
+    include('mobile', `
+      background: linear-gradient(180deg, #130525 60%, rgba(105, 57, 153, 0));
+    `)
   }
 `;
 

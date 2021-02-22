@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import include from './../helpers/MediaQueries';
 
 const StyledPassswordRecovery = styled.span`
   color: #989FDB;
@@ -6,19 +7,23 @@ const StyledPassswordRecovery = styled.span`
   text-align: center;
   width: 257px;
 
-  @media(max-width: 482px) {
-    color: #FFF;
-    z-index: 2;
-    transform: translateY(calc(47px + 100%));
+  ${
+    include('mobile', `
+      color: #FFF;
+      z-index: 2;
+      transform: translateY(calc(47px + 100%));
+    `)
   }
 `;
 const Link = styled.a`
   color: #9D25B0;
   text-decoration: underline;
 
-  @media(max-width: 482px) {
-    color: #FFF;
-    text-decoration: none;
+  ${
+    include('mobile', `
+      color: #FFF;
+      text-decoration: none;
+    `)
   }
 `;
 

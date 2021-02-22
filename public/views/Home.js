@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import GlobalStyles from './../helpers/GlobalStyles';
 import Cover from './../components/Cover';
 import Form from './../components/Form';
-
+import include from './../helpers/MediaQueries';
 
 const StyledHome = styled.div`
   display: grid;
@@ -12,14 +12,18 @@ const StyledHome = styled.div`
   width: 100%;
   height: 100%;
 
-  @media(max-width: 768px) {
-    grid-template-columns: 35% auto;
+  ${
+    include('tablet', `
+      grid-template-columns: 35% auto;
+    `)
   }
 
-  @media(max-width: 482px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  ${
+    include('mobile', `
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    `)
   }
 `;
 
@@ -29,7 +33,7 @@ export default function Home() {
       <GlobalStyles />
       <Cover />
       <Form />
-      
+
     </StyledHome>
   );
 }

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import include from './../helpers/MediaQueries';
 
 const StyledButton = styled.button`
   background: linear-gradient(267.79deg, #383E71 0%, #9D25B0 99.18%);
@@ -15,11 +16,13 @@ const StyledButton = styled.button`
   outline: none;
   width: 256px;
 
-  @media(max-width: 482px) {
-    margin: 0 auto;
-    transform: translateY(50%);
-    box-shadow: none;
-    width: 168px;
+  ${
+    include('mobile', `
+      box-shadow: none;
+      margin: 0 auto;
+      transform: translateY(50%);
+      width: 168px;
+    `)
   }
 `;
 

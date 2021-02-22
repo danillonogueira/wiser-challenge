@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Background from './Background';
+import include from './../helpers/MediaQueries';
 
 const StyledCover = styled.div`
   display: flex;
@@ -7,9 +8,11 @@ const StyledCover = styled.div`
   height: 100%;
   width: 100%;
 
-  @media(max-width: 482px) {
-    position: absolute;
-    z-index: 1;
+  ${
+    include('mobile', `
+      position: absolute;
+      z-index: 1;
+    `)
   }
 `;
 

@@ -4,6 +4,7 @@ import Button from './Button';
 import Title from './Title';
 import Description from './Description';
 import PassswordRecovery from './PasswordRecovery';
+import include from './../helpers/MediaQueries';
 
 const StyledForm = styled.div`
   display: flex;
@@ -12,21 +13,25 @@ const StyledForm = styled.div`
   padding: 136px 0 0 112px;
   width: 100%;
 
-  @media(max-width: 1366px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
+  ${
+    include('desktop', `
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+    `)
   }
 
-  @media(max-width: 482px) {
-    background: #FFF;
-    border-radius: 8px;
-    padding: 24px 28px 0;
-    position: absolute;
-    z-index: 2;
-    width: auto;
-    height: auto;
+  ${
+    include('mobile', `
+      background: #FFF;
+      border-radius: 8px;
+      padding: 24px 28px 0;
+      position: absolute;
+      z-index: 2;
+      width: auto;
+      height: auto;
+    `)
   }
 `;
 const FormContent = styled.div`
