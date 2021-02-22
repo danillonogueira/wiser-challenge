@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Text from './Text';
+import Input from './Input';
 
 const StyledForm = styled.div`
   display: flex;
@@ -36,6 +37,15 @@ export default function Form() {
           color: #989FDB;
           margin-bottom: 43px;
         `}
+      />
+      <Input 
+        type={'text'}
+        placeholder={'user.name@mail.com'}
+        label={'E-MAIL'}
+      />
+      <Input 
+        type={'password'}
+        label={'SENHA'}
       />
     </StyledForm>
   );
