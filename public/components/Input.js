@@ -6,14 +6,13 @@ const InputContainer = styled.div`
   flex-direction: column;
 `;
 const StyledInput = styled.input`
-  width: 100%;
+  background: #FFF;
   border: 1px solid #989FDB;
   border-radius: 8px;
   height: 48px;
-  width: 256px;
-  background: #FFF;
-  padding: 17px;
   outline: none;
+  padding: 17px;
+  width: 100%;
 
   &, &::placeholder {
     font-size: 10px;

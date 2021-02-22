@@ -19,28 +19,22 @@ export default function Form() {
     <StyledForm>
       <FormContent>
         <Text 
-          content={[
-            'Olá, seja',
-            <br />,
-            'bem-vindo!'
-          ]}
+          content={'Olá, seja bem-vindo!'}
           styles={`
             font-size: 40px;
             line-height: 48px;
             margin-bottom: 16px;
+            max-width: 231px;
           `}
         />
         <Text
-          content= {[
-            'Para acessar a plataforma',
-            <br />,
-            'faça seu login'
-          ]}
+          content= {'Para acessar a plataforma, faça seu login'}
           styles={`
             font-size: 16px;
             font-weight: 600;
             color: #989FDB;
             margin-bottom: 43px;
+            max-width: 222px;
           `}
         />
         <Input 
@@ -54,12 +48,7 @@ export default function Form() {
         />
         <Button label={'ENTRAR'} />
         <Text
-          content={[
-            'Esqueceu seu login ou senha?',
-            <br />,
-            'Clique ',
-            <a href="#">aqui</a>
-          ]}
+          content={'Esqueceu seu login ou senha? Clique aqui'}
           styles={`
             color: #989FDB;
             text-align: center;
