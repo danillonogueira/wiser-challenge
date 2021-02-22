@@ -1,3 +1,5 @@
-export default function Home() {
-  return <div>KEKW</div>
+import Home from './../src/views/Home';
+
+export default function App() {
+  return <Home />
 }
