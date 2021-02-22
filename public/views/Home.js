@@ -15,6 +15,12 @@ const StyledHome = styled.div`
   @media(max-width: 768px) {
     grid-template-columns: 35% auto;
   }
+
+  @media(max-width: 482px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export default function Home() {
@@ -23,6 +29,7 @@ export default function Home() {
       <GlobalStyles />
       <Cover />
       <Form />
+      
     </StyledHome>
   );
 }

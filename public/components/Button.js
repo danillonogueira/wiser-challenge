@@ -14,6 +14,13 @@ const StyledButton = styled.button`
   margin: 24px 0 32px;
   outline: none;
   width: 256px;
+
+  @media(max-width: 482px) {
+    margin: 0 auto;
+    transform: translateY(50%);
+    box-shadow: none;
+    width: 168px;
+  }
 `;
 
 export default function Button({ label }) {

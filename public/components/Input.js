@@ -19,12 +19,21 @@ const StyledInput = styled.input`
     font-size: 10px;
     line-height: 48px;
   }
+
+  @media(max-width: 482px) {
+    margin-bottom: 16px;
+  }
 `;
 const Label = styled.span`
   font-size: 10px;
   line-height: 48px;
   color: #383E71;
   margin-left: 10px;
+
+  @media(max-width: 482px) {
+    line-height: initial;
+    margin-bottom: 8px;
+  }
 `;
 
 export default function Input({ type, placeholder, label }) {

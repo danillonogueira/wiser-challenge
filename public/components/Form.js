@@ -6,6 +6,8 @@ import Description from './Description';
 import PassswordRecovery from './PasswordRecovery';
 
 const StyledForm = styled.div`
+  display: flex;
+  flex-direction: column;
   height: 100%;
   padding: 136px 0 0 112px;
   width: 100%;
@@ -15,6 +17,16 @@ const StyledForm = styled.div`
     justify-content: center;
     align-items: center;
     padding: 0;
+  }
+
+  @media(max-width: 482px) {
+    background: #FFF;
+    border-radius: 8px;
+    padding: 24px 28px 0;
+    position: absolute;
+    z-index: 2;
+    width: auto;
+    height: auto;
   }
 `;
 const FormContent = styled.div`
@@ -39,8 +51,8 @@ export default function Form() {
           type={'password'} 
         />
         <Button label={'ENTRAR'} />
-        <PassswordRecovery url={'https://wiseup.com/pt/online'} />
       </FormContent>
+      <PassswordRecovery url={'https://wiseup.com/pt/online'} />
     </StyledForm>
   );
 }

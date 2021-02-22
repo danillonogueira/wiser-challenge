@@ -7,8 +7,14 @@ const StyledBackground = styled.div`
   background: url('./../assets/background.png');
   background-size: cover;
 
-  @media(max-width: 768px) {
+  @media(max-width: 1024px) {
     background-position: center;
+  }
+
+  @media(max-width: 482px) {
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 `;
 const Mask = styled.div`
@@ -18,6 +24,10 @@ const Mask = styled.div`
   top: 0;
   transform: rotate(-180deg);
   width: 100%;
+
+  @media(max-width: 482px) {
+    background: linear-gradient(180deg, #130525 60%, rgba(105, 57, 153, 0));
+  }
 `;
 
 export default function Background() {
