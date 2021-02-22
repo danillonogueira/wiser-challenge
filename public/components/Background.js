@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import Image from 'next/image';
 
 const StyledBackground = styled.div`
-  height: 386px;
+  height: 100%;
   position: relative;
-  width: 100%;
+  max-width: 56%;
 `;
 const StyledImage = styled(Image)`
   z-index: 2;
