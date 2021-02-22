@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Text from './Text';
 
 const InputContainer = styled.div`
   display: flex;
@@ -14,25 +13,24 @@ const StyledInput = styled.input`
   padding: 17px;
   width: 100%;
 
-  &, &::placeholder {
+  &, 
+  &::placeholder {
+    color: #989FDB;
     font-size: 10px;
     line-height: 48px;
-    color: #989FDB;
   }
+`;
+const Label = styled.span`
+  font-size: 10px;
+  line-height: 48px;
+  color: #383E71;
+  margin-left: 10px;
 `;
 
 export default function Input({ type, placeholder, label }) {
   return (
     <InputContainer>
-      <Text 
-        content={label}
-        styles={`
-          font-size: 10px;
-          line-height: 48px;
-          color: #383E71;
-          margin-left: 10px;
-        `}
-      />
+      <Label>{label}</Label>
       <StyledInput type={type} placeholder={placeholder} />
     </InputContainer>
   );

@@ -7,17 +7,11 @@ const StyledCover = styled.div`
   height: 100%;
   width: 100%;
 `;
-// const Mask = styled.div`
-//   background: #130525;
-//   height: calc(100% - 386px);
-//   width: 100%;
-// `;
 
 export default function Cover() {
   return (
     <StyledCover>
       <Background />
-      {/* <Mask /> */}
     </StyledCover>
   );
 };
