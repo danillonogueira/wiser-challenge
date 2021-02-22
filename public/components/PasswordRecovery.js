@@ -10,8 +10,7 @@ const StyledPassswordRecovery = styled.span`
   ${
     include('mobile', `
       color: #FFF;
-      z-index: 2;
-      transform: translateY(calc(47px + 100%));
+      transform: translateY(47px);
     `)
   }
 `;
