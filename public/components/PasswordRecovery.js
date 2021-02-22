@@ -22,7 +22,6 @@ const Link = styled.a`
   ${
     include('mobile', `
       color: #FFF;
-      text-decoration: none;
     `)
   }
 `;

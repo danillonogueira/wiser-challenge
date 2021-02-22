@@ -28,9 +28,9 @@ const StyledInput = styled.input`
   }
 `;
 const Label = styled.span`
+  color: #383E71;
   font-size: 10px;
   line-height: 48px;
-  color: #383E71;
   margin-left: 10px;
 
   ${
