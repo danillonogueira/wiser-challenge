@@ -5,7 +5,6 @@ const StyledText = styled.span`
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  ${styles}
 
   a {
     color: #9D25B0;
