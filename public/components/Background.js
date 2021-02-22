@@ -4,7 +4,7 @@ import Image from 'next/image';
 const StyledBackground = styled.div`
   height: 100%;
   position: relative;
-  max-width: 56%;
+  width: 100%;
 `;
 const StyledImage = styled(Image)`
   z-index: 2;
