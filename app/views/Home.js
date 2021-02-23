@@ -5,6 +5,7 @@ import Cover from './../components/Cover';
 import Form from './../components/Form';
 import include from './../helpers/MediaQueries';
 import EmailContextProvider from './../contexts/EmailContext';
+import PasswordContextProvider from '../contexts/PasswordContext';
 
 const StyledHome = styled.div`
   display: grid;
@@ -30,13 +31,15 @@ const StyledHome = styled.div`
 
 const Home = () => {
   return (
-    <EmailContextProvider>
-      <StyledHome>
-        <GlobalStyles />
-        <Cover />
-        <Form />
-      </StyledHome>
-    </EmailContextProvider>
+    <PasswordContextProvider>
+      <EmailContextProvider>
+        <StyledHome>
+          <GlobalStyles />
+          <Cover />
+          <Form />
+        </StyledHome>
+      </EmailContextProvider>
+    </PasswordContextProvider>
   );
 };
 
