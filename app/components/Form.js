@@ -9,6 +9,8 @@ import Password from './Password';
 
 const StyledForm = styled.div`
   background: #FAF5FF;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   padding: 136px 0 0 112px;
   width: 100%;
@@ -17,8 +19,6 @@ const StyledForm = styled.div`
   ${
     include('desktop', `
       align-items: center;
-      display: flex;
-      flex-direction: column;
       justify-content: center;
       padding: 0;
     `)

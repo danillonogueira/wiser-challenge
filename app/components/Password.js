@@ -14,8 +14,8 @@ const Password = () => {
         error={!isValid}
         type="password" 
         placeholder="*******" 
-        onChange={(e) => {
-          const value = e.target.value;
+        onChange={(event) => {
+          const value = event.target.value;
 
           setPassword(value);
           setValidation(isPasswordValid(value));

@@ -14,8 +14,8 @@ const Email = () => {
         error={!isValid}
         type="text" 
         placeholder="user.name@mail.com"
-        onChange={(e) => {
-          const value = e.target.value;
+        onChange={(event) => {
+          const value = event.target.value;
 
           setEmail(value);
           setValidation(isEmailValid(value));
