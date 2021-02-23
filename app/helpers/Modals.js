@@ -5,7 +5,7 @@ const MySwal = withReactContent(Swal);
 
 const defaultModal = {
   showConfirmButton: false,
-  timer: 1000,
+  timer: 2000,
   allowOutsideClick: false,
 };
 
