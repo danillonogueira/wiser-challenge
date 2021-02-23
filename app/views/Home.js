@@ -10,9 +10,9 @@ import PasswordContextProvider from '../contexts/PasswordContext';
 const StyledHome = styled.div`
   display: grid;
   grid-template-columns: 56% auto;
+  height: 100%;
   position: fixed;
   width: 100%;
-  height: 100%;
 
   ${
     include('tablet', `
@@ -22,9 +22,9 @@ const StyledHome = styled.div`
 
   ${
     include('mobile', `
+      align-items: center;
       display: flex;
       justify-content: center;
-      align-items: center;
     `)
   }
 `;
