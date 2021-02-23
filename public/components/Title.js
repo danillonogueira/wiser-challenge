@@ -18,7 +18,8 @@ const StyledTitle = styled.span`
     `)
   }
 `;
+const Title = () => {
+  return <StyledTitle>Olá, seja bem-vindo!</StyledTitle>;
+};
 
-export default function Title({ content }) {
-  return <StyledTitle>{content}</StyledTitle>;
-}
+export default Title;

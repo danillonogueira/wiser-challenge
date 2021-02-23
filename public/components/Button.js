@@ -14,6 +14,7 @@ const StyledButton = styled.button`
   line-height: 20px;
   margin: 24px 0 32px;
   outline: none;
+  text-transform: uppercase;
   width: 256px;
 
   ${
@@ -25,7 +26,8 @@ const StyledButton = styled.button`
     `)
   }
 `;
+const Button = () => {
+  return <StyledButton>entrar</StyledButton>;
+};
 
-export default function Button({ label }) {
-  return <StyledButton>{label}</StyledButton>;
-}
+export default Button;

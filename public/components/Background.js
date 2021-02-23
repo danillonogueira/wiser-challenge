@@ -36,11 +36,12 @@ const Mask = styled.div`
     `)
   }
 `;
-
-export default function Background() {
+const Background = () => {
   return (
     <StyledBackground>
       <Mask />
     </StyledBackground>
   );
-}
+};
+
+export default Background;

@@ -15,11 +15,12 @@ const StyledCover = styled.div`
     `)
   }
 `;
-
-export default function Cover() {
+const Cover = () => {
   return (
     <StyledCover>
       <Background />
     </StyledCover>
   );
 };
+
+export default Cover;

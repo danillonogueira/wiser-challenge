@@ -1,10 +1,11 @@
 import styled from 'styled-components';
-import Input from './Input';
 import Button from './Button';
 import Title from './Title';
 import Description from './Description';
 import PassswordRecovery from './PasswordRecovery';
 import include from './../helpers/MediaQueries';
+import Email from './Email';
+import Password from './Password';
 
 const StyledForm = styled.div`
   background: #FAF5FF;
@@ -43,26 +44,19 @@ const FormContent = styled.div`
     `)
   }
 `;
-
-export default function Form() {
+const Form = () => {
   return (
     <StyledForm>
       <FormContent>
-        <Title content={'Olá, seja bem-vindo!'} />
-        <Description content= {'Para acessar a plataforma, faça seu login.'} />
-        <Input 
-          label={'E-MAIL'} 
-          type={'email'} 
-          placeholder={'user.name@mail.com'} 
-        />
-        <Input 
-          label={'SENHA'} 
-          type={'password'}
-          placeholder={'*******'}
-        />
-        <Button label={'ENTRAR'} />
+        <Title />
+        <Description />
+        <Email />
+        <Password />
+        <Button />
       </FormContent>
-      <PassswordRecovery url={'https://wiseup.com/pt/online'} />
+      <PassswordRecovery />
     </StyledForm>
   );
-}
+};
+
+export default Form;

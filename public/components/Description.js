@@ -17,7 +17,8 @@ const StyledDescription = styled.span`
     `)
   }
 `;
+const Description = () => {
+  return <StyledDescription>Para acessar a plataforma, faça seu login.</StyledDescription> 
+};
 
-export default function Description({ content }) {
-  return <StyledDescription>{content}</StyledDescription> 
-}
+export default Description;

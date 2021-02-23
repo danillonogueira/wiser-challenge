@@ -24,11 +24,14 @@ const Link = styled.a`
     `)
   }
 `;
-
-export default function PassswordRecovery({ url }) {
+const PassswordRecovery = () => {
   return (
     <StyledPassswordRecovery>
-      Esqueceu seu login ou senha? <br/> Clique <Link href={url}>aqui</Link>
+      Esqueceu seu login ou senha?
+      <br/>
+      Clique <Link href="https://wiseup.com/pt/online">aqui</Link>
     </StyledPassswordRecovery>
   );
-}
+};
+
+export default PassswordRecovery;

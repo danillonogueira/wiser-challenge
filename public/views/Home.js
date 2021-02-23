@@ -4,6 +4,7 @@ import GlobalStyles from './../helpers/GlobalStyles';
 import Cover from './../components/Cover';
 import Form from './../components/Form';
 import include from './../helpers/MediaQueries';
+import EmailContextProvider from './../contexts/EmailContext';
 
 const StyledHome = styled.div`
   display: grid;
@@ -27,13 +28,17 @@ const StyledHome = styled.div`
   }
 `;
 
-export default function Home() {
+const Home = () => {
   return (
-    <StyledHome>
-      <GlobalStyles />
-      <Cover />
-      <Form />
-    </StyledHome>
+    <EmailContextProvider>
+      <StyledHome>
+        <GlobalStyles />
+        <Cover />
+        <Form />
+      </StyledHome>
+    </EmailContextProvider>
   );
-}
+};
+
+export default Home;
 
