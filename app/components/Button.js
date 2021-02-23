@@ -3,8 +3,9 @@ import include from './../helpers/MediaQueries';
 import { EmailContext } from './../contexts/EmailContext';
 import { PasswordContext } from './../contexts/PasswordContext';
 import { useContext } from 'react';
-import { validateAll } from './../helpers/Validators';
-import { loadGetInitialProps } from 'next/dist/next-server/lib/utils';
+import { validateEmail, validatePassword, validateAll } from './../helpers/Validators';
+import login from './../helpers/Service';
+import { attemptLogin } from '../helpers/Modals';
 
 const StyledButton = styled.button`
   background: linear-gradient(267.79deg, #383E71 0%, #9D25B0 99.18%);
@@ -34,13 +35,29 @@ const StyledButton = styled.button`
 const Button = () => {
   const { email, setEmailValidation } = useContext(EmailContext);
   const { password, setPasswordValidation } = useContext(PasswordContext);
+
+  const checkEmail = (value) => {
+    if (!validateEmail(value)) {
+      setEmailValidation(false);
+    }
+  };
+
+  const checkPassword = (value) => {
+    if (!validatePassword(value)) {
+      setPasswordValidation(false);
+    }
+  };
+
+  const checkInputs = () => {
+    checkEmail(email);
+    checkPassword(password);
+  };
   
   const validate = () => {
-    if (validateAll({ email, password })) {
-      console.log('logging in');
+    if (!validateAll({ email, password })) {
+      checkInputs();
     } else {
-      setEmailValidation(false);
-      setPasswordValidation(false);
+      attemptLogin(login);
     }
   };
 
