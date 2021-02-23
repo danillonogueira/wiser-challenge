@@ -16,7 +16,7 @@ const login = debounce(() => {
           .then(() => showSuccessModal())
           .catch(() => showFailureModal());
     }
-  })
+  });
 }, 250);
 
 export default login;
