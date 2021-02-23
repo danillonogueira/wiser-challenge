@@ -8,13 +8,13 @@ const Email = () => {
   const { 
     setEmail,
     isEmailValid,
-    setEmailValidation
+    setEmailValidity
   } = useContext(EmailContext);
 
   const handleChange = debounce((text) => {
     setEmail(text);
-    setEmailValidation(validateEmail(text));
-  }, 250);
+    setEmailValidity(validateEmail(text));
+  }, 500);
 
   return (
     <Input.Container>

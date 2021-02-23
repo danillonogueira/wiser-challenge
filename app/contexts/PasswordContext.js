@@ -4,7 +4,7 @@ export const PasswordContext = createContext();
 
 const PasswordContextProvider = (props) => {
   const [ password, setPassword ] = useState('');
-  const [ isPasswordValid, setPasswordValidation ] = useState(true);
+  const [ isPasswordValid, setPasswordValidity ] = useState(true);
 
   return (
     <PasswordContext.Provider 
@@ -12,7 +12,7 @@ const PasswordContextProvider = (props) => {
         password, 
         setPassword,
         isPasswordValid,
-        setPasswordValidation
+        setPasswordValidity
       }}>
       {props.children}
     </PasswordContext.Provider>

@@ -4,7 +4,7 @@ export const EmailContext = createContext();
 
 const EmailContextProvider = (props) => {
   const [ email, setEmail ] = useState('');
-  const [ isEmailValid, setEmailValidation ] = useState(true);
+  const [ isEmailValid, setEmailValidity ] = useState(true);
 
   return (
     <EmailContext.Provider 
@@ -12,7 +12,7 @@ const EmailContextProvider = (props) => {
         email, 
         setEmail, 
         isEmailValid, 
-        setEmailValidation
+        setEmailValidity
       }}>
       {props.children}
     </EmailContext.Provider>

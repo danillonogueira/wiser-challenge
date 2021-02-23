@@ -33,18 +33,18 @@ const StyledButton = styled.button`
   }
 `;
 const Button = () => {
-  const { email, setEmailValidation } = useContext(EmailContext);
-  const { password, setPasswordValidation } = useContext(PasswordContext);
+  const { email, setEmailValidity } = useContext(EmailContext);
+  const { password, setPasswordValidity } = useContext(PasswordContext);
 
   const checkEmail = (value) => {
     if (!validateEmail(value)) {
-      setEmailValidation(false);
+      setEmailValidity(false);
     }
   };
 
   const checkPassword = (value) => {
     if (!validatePassword(value)) {
-      setPasswordValidation(false);
+      setPasswordValidity(false);
     }
   };
 
@@ -53,7 +53,7 @@ const Button = () => {
     checkPassword(password);
   };
   
-  const validate = () => {
+  const handleClick = () => {
     if (!validateAll({ email, password })) {
       checkInputs();
     } else {
@@ -61,7 +61,7 @@ const Button = () => {
     }
   };
 
-  return <StyledButton onClick={() => validate()}>entrar</StyledButton>;
+  return <StyledButton onClick={() => handleClick()}>entrar</StyledButton>;
 };
 
 export default Button;

@@ -7,7 +7,6 @@ const Password = () => {
   const {
     setPassword,
     isPasswordValid,
-    setPasswordValidation
   } = useContext(PasswordContext);
 
   return (
@@ -17,12 +16,7 @@ const Password = () => {
         error={!isPasswordValid}
         type="password" 
         placeholder="*******" 
-        onChange={(event) => {
-          const value = event.target.value;
-
-          setPassword(value);
-          setPasswordValidation(validatePassword(value));
-        }}
+        onChange={event => setPassword(event.target.value)}
       />
       { !isPasswordValid && <Input.Error>Digite uma senha;</Input.Error> }
     </Input.Container>
