@@ -14,7 +14,7 @@ const Email = () => {
   const handleChange = debounce((text) => {
     setEmail(text);
     setEmailValidity(validateEmail(text));
-  }, 500);
+  }, 1000);
 
   return (
     <Input.Container>
