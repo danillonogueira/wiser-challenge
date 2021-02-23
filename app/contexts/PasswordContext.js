@@ -2,6 +2,8 @@ import { useState, createContext } from 'react';
 
 export const PasswordContext = createContext();
 
+// kek
+
 const PasswordContextProvider = (props) => {
   const [ password, setPassword ] = useState('');
   const [ isPasswordValid, setPasswordValidation ] = useState(true);
