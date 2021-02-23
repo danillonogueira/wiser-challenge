@@ -3,9 +3,8 @@ import include from './../helpers/MediaQueries';
 import { EmailContext } from './../contexts/EmailContext';
 import { PasswordContext } from './../contexts/PasswordContext';
 import { useContext } from 'react';
-import { validateEmail, validatePassword, validateAll } from './../helpers/Validators';
-import login from './../helpers/Service';
-import { attemptLogin } from '../helpers/Modals';
+import { validateEmail, validatePassword, areInputsValid } from './../helpers/Validators';
+import login from '../events/Login';
 
 const StyledButton = styled.button`
   background: linear-gradient(267.79deg, #383E71 0%, #9D25B0 99.18%);
@@ -48,16 +47,16 @@ const Button = () => {
     }
   };
 
-  const checkInputs = () => {
+  const checkEach = () => {
     checkEmail(email);
     checkPassword(password);
   };
   
   const handleClick = () => {
-    if (!validateAll({ email, password })) {
-      checkInputs();
+    if (!areInputsValid({ email, password })) {
+      checkEach();
     } else {
-      attemptLogin(login);
+      login();
     }
   };
 

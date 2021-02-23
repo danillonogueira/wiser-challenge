@@ -1,6 +1,5 @@
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
-import { debounce } from 'lodash';
 
 const MySwal = withReactContent(Swal);
 
@@ -10,7 +9,7 @@ const defaultModal = {
   allowOutsideClick: false,
 };
 
-const showSuccessModal = () => {
+export const showSuccessModal = () => {
   MySwal.fire({
     ...defaultModal,
     icon: 'success',
@@ -18,23 +17,10 @@ const showSuccessModal = () => {
   });
 };
 
-const showFailureModal = () => {
+export const showFailureModal = () => {
   MySwal.fire({
     ...defaultModal,
     icon: 'error',
     text: 'Não foi possível realizar o login',
   });
 };
-
-export const attemptLogin = debounce((request) => {
-  MySwal.fire({
-    text: 'Fazendo login...',
-    allowOutsideClick: false,
-    didOpen: () => {
-      MySwal.showLoading();
-        request()
-          .then(() => showSuccessModal())
-          .catch(() => showFailureModal());
-    }
-  })
-}, 250);

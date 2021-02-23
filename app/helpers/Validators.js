@@ -17,7 +17,7 @@ export const validatePassword = (password) => {
   return isString(password) && password.length ? true : false;
 };
 
-export const validateAll = (credentials) => {
+export const areInputsValid = (credentials) => {
   const { email, password } = credentials;
 
   return validateEmail(email) && validatePassword(password) ? true : false;

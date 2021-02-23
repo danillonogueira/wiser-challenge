@@ -23,7 +23,7 @@ const Email = () => {
         error={!isEmailValid}
         type="text" 
         placeholder="user.name@mail.com"
-        onChange={(event) => handleChange(event.target.value)}
+        onChange={event => handleChange(event.target.value)}
       />
       { !isEmailValid && <Input.Error>Digite um email válido;</Input.Error> }
     </Input.Container>
