@@ -1,27 +1,30 @@
 import Input from './Input';
 import { PasswordContext } from './../contexts/PasswordContext';
-import { useContext, useState } from 'react';
-import { isPasswordValid } from './../helpers/Validators';
+import { useContext } from 'react';
+import { validatePassword } from './../helpers/Validators';
 
 const Password = () => {
-  const [ password, setPassword ] = useContext(PasswordContext);
-  const [ isValid, setValidation ] = useState(true);
+  const {
+    setPassword,
+    isPasswordValid,
+    setPasswordValidation
+  } = useContext(PasswordContext);
 
   return (
     <Input.Container>
       <Input.Label>senha</Input.Label>
       <Input.Itself 
-        error={!isValid}
+        error={!isPasswordValid}
         type="password" 
         placeholder="*******" 
         onChange={(event) => {
           const value = event.target.value;
 
           setPassword(value);
-          setValidation(isPasswordValid(value));
+          setPasswordValidation(validatePassword(value));
         }}
       />
-      { !isValid && <Input.Error>Digite uma senha;</Input.Error> }
+      { !isPasswordValid && <Input.Error>Digite uma senha;</Input.Error> }
     </Input.Container>
   );
 };

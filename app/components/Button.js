@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 import include from './../helpers/MediaQueries';
+import { EmailContext } from './../contexts/EmailContext';
+import { PasswordContext } from './../contexts/PasswordContext';
+import { useContext } from 'react';
+import { validateAll } from './../helpers/Validators';
+import { loadGetInitialProps } from 'next/dist/next-server/lib/utils';
 
 const StyledButton = styled.button`
   background: linear-gradient(267.79deg, #383E71 0%, #9D25B0 99.18%);
@@ -27,7 +32,19 @@ const StyledButton = styled.button`
   }
 `;
 const Button = () => {
-  return <StyledButton>entrar</StyledButton>;
+  const { email, setEmailValidation } = useContext(EmailContext);
+  const { password, setPasswordValidation } = useContext(PasswordContext);
+  
+  const validate = () => {
+    if (validateAll({ email, password })) {
+      console.log('logging in');
+    } else {
+      setEmailValidation(false);
+      setPasswordValidation(false);
+    }
+  };
+
+  return <StyledButton onClick={() => validate()}>entrar</StyledButton>;
 };
 
 export default Button;

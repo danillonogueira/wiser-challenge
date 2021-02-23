@@ -1,13 +1,24 @@
-export const isEmailValid = (email) => {
-  const _email = email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g);
+/**
+ * Functions that are used to validate both inputs.
+ * For some reason, I was not being able to work with
+ * truthy values here. That's why the code might look
+ * like bad practice.
+ */
 
-  return !_email ? _email : _email.length;
+const isString = (str) => {
+  return typeof str === 'string';
+}
+
+export const validateEmail = (email) => {
+  return isString(email) && email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g) ? true : false;
 };
 
-export const isPasswordValid = (password) => {
-  return password.length;
+export const validatePassword = (password) => {
+  return isString(password) && password.length ? true : false;
 };
 
-export const areBothValid = (email, password) => {
-  return isEmailValid(email) && isPasswordValid(password);
+export const validateAll = (credentials) => {
+  const { email, password } = credentials;
+
+  return validateEmail(email) && validatePassword(password) ? true : false;
 };
