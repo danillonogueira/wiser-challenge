@@ -13,7 +13,8 @@ const EmailContextProvider = (props) => {
         setEmail, 
         isEmailValid, 
         setEmailValidity
-      }}>
+      }}
+    >
       {props.children}
     </EmailContext.Provider>
   );

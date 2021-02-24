@@ -13,7 +13,8 @@ const PasswordContextProvider = (props) => {
         setPassword,
         isPasswordValid,
         setPasswordValidity
-      }}>
+      }}
+    >
       {props.children}
     </PasswordContext.Provider>
   );
