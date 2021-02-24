@@ -7,7 +7,7 @@
 
 const isString = (str) => {
   return typeof str === 'string';
-}
+};
 
 export const validateEmail = (email) => {
   return isString(email) && email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g) ? true : false;
