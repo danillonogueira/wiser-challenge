@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import Button from './Button';
+import include from './../helpers/MediaQueries';
 import Title from './Title';
 import Description from './Description';
-import PassswordRecovery from './PasswordRecovery';
-import include from './../helpers/MediaQueries';
 import Email from './Email';
 import Password from './Password';
+import Button from './Button';
+import PassswordRecovery from './PasswordRecovery';
 import { EmailContext } from './../contexts/EmailContext';
 import { PasswordContext } from './../contexts/PasswordContext';
 import { useContext } from 'react';
