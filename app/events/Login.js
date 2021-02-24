@@ -10,14 +10,12 @@ const login = debounce((callback) => {
   Message.fire({
     text: 'Fazendo login...',
     allowOutsideClick: false,
-    didOpen: () => {
+    didOpen() {
       Message.showLoading();
         loginService()
-          .then(() => {
-            showSuccessModal();
-            callback();
-          })
-          .catch(() => showFailureModal());
+          .then(() => showSuccessModal())
+          .catch(() => showFailureModal())
+          .finally(() => callback());
     }
   });
 }, 250);
