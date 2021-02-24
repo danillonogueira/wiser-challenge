@@ -1,3 +1,4 @@
+![Wiser Logo](https://media-exp1.licdn.com/dms/image/C560BAQGEXp_BWe2Q-A/company-logo_200_200/0/1585938191467?e=2159024400&v=beta&t=Oj_5MoTZiiaBpjH3RKazxUx3hE0C3CEe7-Myl2sizaU)
 # Wiser Challenge
 ## Aim
 Project for a front-end developer job opportunity at [Wiser Educação](https://wisereducacao.com/). The challenge consisted in a login page that had to be built in React and hosted somewhere. The prototype can be seen [here](https://www.figma.com/file/zC98pMR61WhKX5joTKTMr6/Teste-Wiser?node-id=3%3A4) and the final result was put on air thanks to [Vercel](https://vercel.com/) and is available [here](https://wiser-challenge-psi.vercel.app/). This doc also contains instructions on how to build and run it.
