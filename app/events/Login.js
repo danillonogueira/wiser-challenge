@@ -4,14 +4,14 @@ import { debounce } from 'lodash';
 import loginService from './../services/LoginService';
 import { showSuccessModal, showFailureModal } from './../helpers/Modals';
 
-const MySwal = withReactContent(Swal);
+const Message = withReactContent(Swal);
 
 const login = debounce((callback) => {
-  MySwal.fire({
+  Message.fire({
     text: 'Fazendo login...',
     allowOutsideClick: false,
     didOpen: () => {
-      MySwal.showLoading();
+      Message.showLoading();
         loginService()
           .then(() => {
             showSuccessModal();
