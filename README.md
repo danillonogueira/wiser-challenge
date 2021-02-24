@@ -29,4 +29,4 @@ Project for a front-end developer job opportunity at [Wiser Educação](https://
 
 > The project will also be available in port 3000.
 ## Reaching out to me
-> dnll_nog@yahoo.com
+dnll_nog@yahoo.com
