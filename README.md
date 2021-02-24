@@ -19,14 +19,14 @@ Project for a front-end developer job opportunity at [Wiser Educação](https://
 ```$ npm install```
 ### Building for production
 ```$ npm run build```
-### Running a local build*
+### Running a local build
 ```$ npm start```
 
 
-> *Make sure port 3000 is not being used.
-### Running in a development environment*
+> Make sure port 3000 is not being used.
+### Running in a development environment
 ```$ npm run dev```
 
-> *The project will also be available in port 3000.
+> The project will also be available in port 3000.
 ### Reaching out to me
 > dnll_nog@yahoo.com
