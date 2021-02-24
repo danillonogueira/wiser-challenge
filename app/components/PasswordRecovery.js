@@ -28,7 +28,7 @@ const PassswordRecovery = () => {
   return (
     <StyledPassswordRecovery>
       Esqueceu seu login ou senha?
-      <br/>
+      <br />
       Clique <Link href="https://wiseup.com/pt/online">aqui</Link>
     </StyledPassswordRecovery>
   );
