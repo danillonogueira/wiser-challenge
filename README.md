@@ -23,10 +23,10 @@ Project for a front-end developer job opportunity at [Wiser Educação](https://
 ```$ npm start```
 
 
-*Make sure port 3000 is not being used.
+> *Make sure port 3000 is not being used.
 ### Running in a development environment*
 ```$ npm run dev```
 
-*The project will also be available in port 3000.
+> *The project will also be available in port 3000.
 ### Reaching out to me
 > dnll_nog@yahoo.com
