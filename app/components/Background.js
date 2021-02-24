@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import include from './../helpers/MediaQueries';
-import img from './../../public/assets/background.png'
+import background from './../../public/assets/background.png'
 
 const StyledBackground = styled.div`
-  background: url(${img});
+  background: url(${background});
   background-size: cover;
   height: 100%;
   position: relative;

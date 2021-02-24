@@ -23,7 +23,7 @@ const Email = () => {
         onBlur={() => setEmailValidity(validateEmail(email))}
         value={email}
       />
-      { !isEmailValid && <Input.Error>Digite um email válido;</Input.Error> }
+      {!isEmailValid && <Input.Error>Digite um email válido;</Input.Error>}
     </Input.Container>
   );
 };

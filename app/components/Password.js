@@ -27,7 +27,7 @@ const Password = () => {
         onChange={event => handleChange(event.target.value)}
         value={password}
       />
-      { !isPasswordValid && <Input.Error>Digite uma senha;</Input.Error> }
+      {!isPasswordValid && <Input.Error>Digite uma senha;</Input.Error>}
     </Input.Container>
   );
 };
