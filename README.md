@@ -28,5 +28,5 @@ Project for a front-end developer job opportunity at [Wiser Educação](https://
 ```$ npm run dev```
 
 > The project will also be available in port 3000.
-## Reaching out to me:
+## Reaching out to me
 > dnll_nog@yahoo.com
