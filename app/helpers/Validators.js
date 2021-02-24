@@ -1,7 +1,7 @@
 /**
  * Functions that are used to validate both inputs.
  * For some reason, I was not being able to work with
- * truthy values here. That's why this code might look
+ * truthy values. That's why this code might look
  * like bad practice.
  */
 
