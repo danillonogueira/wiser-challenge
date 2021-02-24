@@ -31,15 +31,15 @@ const StyledHome = styled.div`
 
 const Home = () => {
   return (
-    <PasswordContextProvider>
-      <EmailContextProvider>
+    <EmailContextProvider>
+      <PasswordContextProvider>
         <StyledHome>
           <GlobalStyles />
           <Cover />
           <Form />
         </StyledHome>
-      </EmailContextProvider>
-    </PasswordContextProvider>
+      </PasswordContextProvider>
+    </EmailContextProvider>
   );
 };
 
