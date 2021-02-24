@@ -3,7 +3,7 @@
 ## Aim
 Project for a front-end developer job opportunity at [Wiser Educação](https://wisereducacao.com/). The challenge consisted in a login page that had to be built in React and hosted somewhere. The prototype can be seen [here](https://www.figma.com/file/zC98pMR61WhKX5joTKTMr6/Teste-Wiser?node-id=3%3A4) and the final result was put on air thanks to [Vercel](https://vercel.com/) and is available [here](https://wiser-challenge-psi.vercel.app/). This doc also contains instructions on how to build and run it.
 ## Technologies
-* <s>TypesScript</s>* JavaScript
+* <s>TypeScript</s>* JavaScript
 * React
 * NextJS
 * Styled Components
