@@ -10,7 +10,7 @@ Project for a front-end developer job opportunity at [Wiser Educação](https://
 * <s>Redux</s>* React Hooks
 * Axios
 
-*These items have not been used due to time constraints and personal limitations. Unit tests were also not written. TypeScript and Redux are undoubtedly amazing tools and it is a shame I am still not comfortable with either of them -- for now. Also, Redux was set aside due to the simplistic scope and consequently the light state management that the project demanded. Instead, React Hooks were used in order to handle state.
+> *These items have not been used due to time constraints and personal limitations. Unit tests were also not written. TypeScript and Redux are undoubtedly amazing tools and it is a shame I am still not comfortable with either of them -- for now. Also, Redux was set aside due to the simplistic scope and consequently the light state management that the project demanded. Instead, React Hooks were used in order to handle state.
 ## Requirements
 [Node.js](https://nodejs.org/en/)
 ## Running the project
@@ -29,4 +29,4 @@ Project for a front-end developer job opportunity at [Wiser Educação](https://
 
 *The project will also be available in port 3000.
 ### Reaching out to me
-```dnll_nog@yahoo.com```
+> dnll_nog@yahoo.com
