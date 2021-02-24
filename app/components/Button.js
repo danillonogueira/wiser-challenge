@@ -5,7 +5,7 @@ const StyledButton = styled.input`
   background: linear-gradient(267.79deg, #383E71 0%, #9D25B0 99.18%);
   border: none;
   border-radius: 8px;
-  box-shadow: 0px 10px 25px #CF99DB;
+  box-shadow: 0 10px 25px #CF99DB;
   color: #FFF;
   cursor: pointer;
   font-size: 16px;
