@@ -5,6 +5,7 @@ import Input from './Input';
 
 const Password = () => {
   const {
+    password,
     setPassword,
     isPasswordValid,
     setPasswordValidity
@@ -23,6 +24,7 @@ const Password = () => {
         type="password" 
         placeholder="*******" 
         onChange={event => handleChange(event.target.value)}
+        value={password}
       />
       { !isPasswordValid && <Input.Error>Digite uma senha;</Input.Error> }
     </Input.Container>

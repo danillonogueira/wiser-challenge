@@ -6,14 +6,17 @@ import { showSuccessModal, showFailureModal } from './../helpers/Modals';
 
 const MySwal = withReactContent(Swal);
 
-const login = debounce(() => {
+const login = debounce((callback) => {
   MySwal.fire({
     text: 'Fazendo login...',
     allowOutsideClick: false,
     didOpen: () => {
       MySwal.showLoading();
         loginService()
-          .then(() => showSuccessModal())
+          .then(() => {
+            showSuccessModal();
+            callback();
+          })
           .catch(() => showFailureModal());
     }
   });

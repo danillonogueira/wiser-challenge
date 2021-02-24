@@ -6,6 +6,11 @@ import PassswordRecovery from './PasswordRecovery';
 import include from './../helpers/MediaQueries';
 import Email from './Email';
 import Password from './Password';
+import { EmailContext } from './../contexts/EmailContext';
+import { PasswordContext } from './../contexts/PasswordContext';
+import { useContext } from 'react';
+import { validateEmail, validatePassword, areInputsValid } from './../helpers/Validators';
+import login from '../events/Login';
 
 const StyledForm = styled.div`
   background: #FAF5FF;
@@ -30,7 +35,7 @@ const StyledForm = styled.div`
     `)
   }
 `;
-const FormContent = styled.div`
+const FormContent = styled.form`
   display: flex;
   flex-direction: column;
   width: 257px;
@@ -45,9 +50,52 @@ const FormContent = styled.div`
   }
 `;
 const Form = () => {
+  const { 
+    email, 
+    setEmail, 
+    setEmailValidity 
+  } = useContext(EmailContext);
+  const { 
+    password, 
+    setPassword, 
+    setPasswordValidity 
+  } = useContext(PasswordContext);
+
+  const checkEmail = (value) => {
+    if (!validateEmail(value)) {
+      setEmailValidity(false);
+    }
+  };
+
+  const checkPassword = (value) => {
+    if (!validatePassword(value)) {
+      setPasswordValidity(false);
+    }
+  };
+
+  const checkEach = () => {
+    checkEmail(email);
+    checkPassword(password);
+  };
+
+  const cleanUp = () => {
+    setEmail('');
+    setPassword('');
+  };
+  
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    if (!areInputsValid({ email, password })) {
+      checkEach();
+    } else {
+      login(cleanUp);
+    }
+  };
+
   return (
     <StyledForm>
-      <FormContent>
+      <FormContent onSubmit={event => handleSubmit(event)}>
         <Title />
         <Description />
         <Email />

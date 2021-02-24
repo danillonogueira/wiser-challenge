@@ -1,12 +1,7 @@
 import styled from 'styled-components';
 import include from './../helpers/MediaQueries';
-import { EmailContext } from './../contexts/EmailContext';
-import { PasswordContext } from './../contexts/PasswordContext';
-import { useContext } from 'react';
-import { validateEmail, validatePassword, areInputsValid } from './../helpers/Validators';
-import login from '../events/Login';
 
-const StyledButton = styled.button`
+const StyledButton = styled.input`
   background: linear-gradient(267.79deg, #383E71 0%, #9D25B0 99.18%);
   border: none;
   border-radius: 8px;
@@ -32,35 +27,12 @@ const StyledButton = styled.button`
   }
 `;
 const Button = () => {
-  const { email, setEmailValidity } = useContext(EmailContext);
-  const { password, setPasswordValidity } = useContext(PasswordContext);
-
-  const checkEmail = (value) => {
-    if (!validateEmail(value)) {
-      setEmailValidity(false);
-    }
-  };
-
-  const checkPassword = (value) => {
-    if (!validatePassword(value)) {
-      setPasswordValidity(false);
-    }
-  };
-
-  const checkEach = () => {
-    checkEmail(email);
-    checkPassword(password);
-  };
-  
-  const handleClick = () => {
-    if (!areInputsValid({ email, password })) {
-      checkEach();
-    } else {
-      login();
-    }
-  };
-
-  return <StyledButton onClick={() => handleClick()}>entrar</StyledButton>;
+  return (
+    <StyledButton 
+      type="submit" 
+      value="entrar"
+    />
+  );
 };
 
 export default Button;

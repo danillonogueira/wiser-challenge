@@ -2,19 +2,14 @@ import Input from './Input';
 import { EmailContext } from './../contexts/EmailContext';
 import { useContext } from 'react';
 import { validateEmail } from './../helpers/Validators';
-import { debounce } from 'lodash';
 
 const Email = () => {
-  const { 
+  const {
+    email,
     setEmail,
     isEmailValid,
     setEmailValidity
   } = useContext(EmailContext);
-
-  const handleChange = debounce((text) => {
-    setEmail(text);
-    setEmailValidity(validateEmail(text));
-  }, 1000);
 
   return (
     <Input.Container>
@@ -23,7 +18,9 @@ const Email = () => {
         error={!isEmailValid}
         type="text" 
         placeholder="user.name@mail.com"
-        onChange={event => handleChange(event.target.value)}
+        onChange={event => setEmail(event.target.value)}
+        onBlur={() => setEmailValidity(validateEmail(email))}
+        value={email}
       />
       { !isEmailValid && <Input.Error>Digite um email válido;</Input.Error> }
     </Input.Container>
