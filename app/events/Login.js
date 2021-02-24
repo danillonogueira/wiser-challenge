@@ -12,10 +12,10 @@ const login = debounce((callback) => {
     allowOutsideClick: false,
     didOpen() {
       Message.showLoading();
-        loginService()
-          .then(() => showSuccessModal())
-          .catch(() => showFailureModal())
-          .finally(() => callback());
+      loginService()
+        .then(() => showSuccessModal())
+        .catch(() => showFailureModal())
+        .finally(() => callback());
     }
   });
 }, 250);
