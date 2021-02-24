@@ -19,7 +19,8 @@ const Password = () => {
   return (
     <Input.Container>
       <Input.Label>senha</Input.Label>
-      <Input.Itself 
+      <Input.Itself
+        name="password"
         error={!isPasswordValid}
         type="password" 
         placeholder="*******" 

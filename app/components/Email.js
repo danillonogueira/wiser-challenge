@@ -15,6 +15,7 @@ const Email = () => {
     <Input.Container>
       <Input.Label>e-mail</Input.Label>
       <Input.Itself
+        name="email"
         error={!isEmailValid}
         type="text" 
         placeholder="user.name@mail.com"

@@ -17,6 +17,7 @@ const Itself = styled.input`
   border: solid 1px;
   border-color: ${props => props.error ? '#FF377F' : '#989FDB'};
   border-radius: 8px;
+  color: #383E71;
   height: 48px;
   margin-bottom: 8px;
   outline: none;
@@ -25,9 +26,12 @@ const Itself = styled.input`
 
   &, 
   &::placeholder {
-    color: #989FDB;
     font-size: 10px;
     line-height: 48px;
+  }
+
+  &::placeholder {
+    color: #989FDB;
   }
 `;
 const Label = styled.span`
